@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+
+
+
+
+
+
+<html slick-uniqueid="3">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+
+<title>ENGG5104 Project 2: Automatic Panoramic Mosaic Stitching</title>
+
+
+</head>
+
+<body bgcolor="#FFFFFF">
+
+
+
+<h1 align="center"><font face="Arial"><strong>ENGG5104 Project 2: Automatic Panoramic Mosaic Stitching</strong></font></h1>
+
+
+
+
+
+<h2 align="left"><font face="Arial"><u>Goal</u></font></h2>
+<ol>
+<li>Align the photographs and then blend the resulting photos into a single seamless panorama.</li>
+<li>View the resulting panorama inside an interactive Web viewer.</li>
+</ol>
+
+
+<h2 align="left"><font face="Arial"><u>Before Alignment: correct radial distortion</u></font></h2>
+When images are taken with wide-angle lenses, it is often necessary to model lens distortions such as radial distortion[1]. The simplest radial distortion models
+use low-order polynomials, e.g.,
+<div align="center">
+<a href="./distortion.jpg" ><img src="./distortion.jpg" alt="distortion" width="250" height="150" /></a>
+</div>
+In the function WarpRDField(), I implement the polynomial distortion models above. While in the testing images, there are no much radial distortion. So in the final result, k1 and k2 is set as 0. This part work well
+
+
+
+<h2 align="left"><font face="Arial"><u>Align all images</u></font></h2>
+<h3>Interest point detecting and matching</h3>
+I use SIFT executable of David Lowe <a href="http://www.cs.ubc.ca/~lowe/keypoints/">http://www.cs.ubc.ca/~lowe/keypoints/</a> for computing the feature points[2]. In the function matchFeatures(), I implement a simple nearest neighbor algorithm with a threshold to match SIFT feature. If the ratio of the distances between first nearest neighbor and second nearest neighbor is smaller than threshold, the first nearest neighbor will be chosen as the matching point. With larger threshold, the number of matching pairs become larger together with more incorrect matching pairs. In this experiment, the threshold is set as 0.6.
+
+<h3>Compute rotation matrix</h3>
+After matching the features, in the function alignImagePair(), RANSAC is used to remove incorrect matching pair. The procedures are below:
+<div align="left">
+<a href="./RANSAC.jpg" ><img  src="./RANSAC.jpg" alt="RANSAC" width="450" height="250" /></a>
+</div>
+The first step is implemented in the function findFeaturePairs(). It randomly selects two feature pair pi and pi'. The computation of A and R using SVD is in the function leastSquaresFit(). Computation of the number of inliers is in the function countInliers().
+
+
+
+<h2 align="left"><font face="Arial"><u>Blend images together</u></font></h2>
+<h3>Spherical inverse warping</h3>
+First of all, the image should be warped and rotated by the rotation matrix R from image alignment step. The Spherical inverse warping and 3D roration is implemented according to:
+<div align="left">
+<a href="./rotation.jpg"><img  src="./rotation.jpg" alt="rotation" width="600" height="370" /></a>
+</div>
+The function WarpSphericalField() is used to map from planar coordinates to spherical coordinates.
+<h3>Feathering and center-weighting</h3>
+The simplest way to create a final composite is to simply take an average value at each pixel[1]. However, simple averaging usually does not work very well, since xposure differences, mis-registrations, and scene movement are all very visible[1]. A better approach to averaging is to weight pixels near the center of the image more heavily and to down-weight pixels near the edges[1]. After getting the parameter--blendRadius, the weight is set as 1 - (distance(p,p0)/blendRadius)^2, where distance(p,p0) &lt; blendRadius and 0 otherwise. It is implemented in SetImageAlpha().
+<h3>Blend image to ACCUMULATOR</h3>
+Every image is rotated first and added to a accumulator together with its weights. It is implemented in AccumulateBlend().
+<h3>Normalize accumulator</h3>
+After adding all the images to accumulator, all the pixel is divided by the sum of their weights. It is implemented in NormalizeBlend().
+
+
+
+<h2 align="left"><font face="Arial"><u>Creating the Panorama</u></font></h2>
+
+
+<li class="MsoNormal">If the images have radial distortion, use a series of commands such as:<br>
+<br> &nbsp;&nbsp;&nbsp; panorama<i> rdWarp img_i.tga goodimg_i.tga f k1 k2</i><br>
+<br>
+This removes radial distortion and stores the results in <i>
+				goodimg_i.tga</i>.<br>
+&nbsp;</li>
+<li class="MsoNormal" style="margin-bottom: 12pt">Compute the features for each of the images by SIFT executable of David Lowe <a style="color: blue; text-decoration: underline; text-underline: single" href="http://www.cs.ubc.ca/~lowe/keypoints/">
+http://www.cs.ubc.ca/~lowe/keypoints/</a>.<br>
+Then end up with a file <i>feature_i.key</i> for image i. 
+</li>
+<li class="MsoNormal" style="margin-bottom: 12pt">Create a text	file (say <i>image_list.txt</i>), which looks like this:<br>
+<br>
+<i>&nbsp;&nbsp;&nbsp; goodimg_1.tga feature_1.key<br>
+&nbsp;&nbsp;&nbsp; goodimg_2.tga feature_2.key<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...<br>
+&nbsp;&nbsp;&nbsp; goodimg_n.tga feature_n.key</i> 
+</li>
+<li class="MsoNormal" style="margin-bottom: 12pt">To match all 
+of the input images and compute their pairwise alignments, use<br>
+<br>&nbsp;&nbsp;&nbsp; panorama<i> alignAll image_list.txt orientations.txt 
+minMatches f nRANSAC RANSACthresh bundleAdjustIters [sift]</i><br>
+<br>This will output a file <i>orientations.txt</i> with the global orientations.</li>
+<li class="MsoNormal">Finally, stitch the images into the final 
+panorama <i>outimg.tga</i>:<br>
+<br>
+<i>&nbsp;&nbsp;&nbsp; panorama blendAll orientations.txt outimg.tga f 
+blendRadius</i><br>
+</li>
+
+
+
+
+
+
+
+
+
+<h2 align="left"><font face="Arial"><u>Results</u></font></h2>
+
+
+Parameter:
+
+f = 572,
+
+k1 = 0,
+
+k2 = 0,
+
+minMatches = 20,
+
+nRANSAC = 100,
+
+RANSACthresh = 10,
+
+blendRadius = 350.
+
+<tr valign="top">
+<td colspan="2" width="1040"><div class="wpmd">
+<div><br></div>
+<div align="center"><img border="0" hspace="1" vspace="1" src="./outimg.jpg" width="600" height="260"></div>
+</div>
+</td>
+</tr>
+<tr valign="top">
+<td colspan="2" width="1040"><div class="wpmd">
+<div><br></div>
+<div align="center"><font class="ws16"><a href="./outimg.jpg">High Resolution Image</a></font><font class="ws16">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font class="ws16"><a href="./outimg.html">360 degree</a></font></div>
+<div align="center"><font class="ws16"><br></font></div>
+</div>
+</td>
+</tr>
+Parameter:
+
+f = 271,
+
+k1 = 0,
+
+k2 = 0,
+
+minMatches = 10,
+
+nRANSAC = 100,
+
+RANSACthresh = 10,
+
+blendRadius = 350.
+
+<tr valign="top">
+<td colspan="2" width="1040"><div class="wpmd">
+<div><br></div>
+<div align="center"><img border="0" hspace="1" vspace="1" src="./outimg_DSC.jpg" width="850" height="300"></div>
+</div>
+</td>
+</tr>
+<tr valign="top">
+<td colspan="2" width="1040"><div class="wpmd">
+<div><br></div>
+<div align="center"><font class="ws16"><a href="./outimg_DSC.jpg">High Resolution Image</a></font><font class="ws16">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font class="ws16"><a href="./outimg_DSC.html">360 degree</a></font></div>
+<div align="center"><font class="ws16"><br></font></div>
+</div>
+</td>
+</tr>
+Parameter:
+
+f = 556,
+
+k1 = 0,
+
+k2 = 0,
+
+minMatches = 20,
+
+nRANSAC = 100,
+
+RANSACthresh = 10,
+
+blendRadius = 350.
+
+
+<tr valign="top">
+<td colspan="2" width="1040"><div class="wpmd">
+<div><br></div>
+<div align="center"><img border="0" hspace="1" vspace="1" src="./outimg_IMG.jpg" width="875" height="300"></div>
+</div>
+</td>
+</tr>
+<tr valign="top">
+<td colspan="2" width="1040"><div class="wpmd">
+<div><br></div>
+<div align="center"><font class="ws16"><a href="./outimg_IMG.jpg">High Resolution Image</a></font><font class="ws16">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font class="ws16"><a href="./outimg_IMG.html">360 degree</a></font></div>
+<div align="center"><font class="ws16"><br></font></div>
+</div>
+</td>
+</tr>
+Parameter:
+
+f = 533,
+
+k1 = 0,
+
+k2 = 0,
+
+minMatches = 20,
+
+nRANSAC = 100,
+
+RANSACthresh = 10,
+
+blendRadius = 400.
+
+<tr valign="top">
+<td colspan="2" width="1040"><div class="wpmd">
+<div><br></div>
+<div align="center"><img border="0" hspace="1" vspace="1" src="./outimg_MYIMG.jpg" width="840" height="250"></div>
+</div>
+</td>
+</tr>
+<tr valign="top">
+<td colspan="2" width="1040"><div class="wpmd">
+<div><br></div>
+<div align="center"><font class="ws16"><a href="./outimg_MYIMG.jpg">High Resolution Image</a></font><font class="ws16">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font class="ws16"><a href="./outimg_MYIMG.html">360 degree</a></font></div>
+<div align="center"><font class="ws16"><br></font></div>
+</div>
+</td>
+</tr>
+
+
+
+<h2 align="left"><font face="Arial"><u>References</u></font></h2>
+<p><font face="Times New Roman">[1] <font size="4">Richard Szeliski. <i>Image Alignment and Stitching: A 
+Tutorial.</i> MSR technical report</font></font></p>
+<p><font size="4" face="Times New Roman">[2] Brown, Matthew, Lowe, David. <i>Automatic Panoramic Image 
+Stitching using Invariant Features.</i> IJCV07</font></p>
+<p>&nbsp;</p>
+
+
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,558 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML 
+xmlns="http://www.w3.org/TR/REC-html40" xmlns:v = 
+"urn:schemas-microsoft-com:vml" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:w = 
+"urn:schemas-microsoft-com:office:word"><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content=FrontPage.Editor.Document name=ProgId>
+<META content="MSHTML 6.00.5296.0" name=GENERATOR>
+<META content="Microsoft Word 9" name=Originator><LINK 
+href="./project1_files/editdata.mso" rel=Edit-Time-Data><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>lizhang</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>uw</o:LastAuthor>
+  <o:Revision>12</o:Revision>
+  <o:TotalTime>57</o:TotalTime>
+  <o:Created>2002-01-11T08:49:00Z</o:Created>
+  <o:LastSaved>2003-01-09T03:17:00Z</o:LastSaved>
+  <o:Pages>10</o:Pages>
+  <o:Words>2687</o:Words>
+  <o:Characters>15319</o:Characters>
+  <o:Company>CSE-UW</o:Company>
+  <o:Lines>127</o:Lines>
+  <o:Paragraphs>30</o:Paragraphs>
+  <o:CharactersWithSpaces>18812</o:CharactersWithSpaces>
+  <o:Version>9.4402</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<STYLE>@page Section1 {mso-header-margin: 35.4pt; mso-footer-margin: 35.4pt; mso-paper-source: 0; }
+P.MsoNormal {
+	FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; FONT-FAMILY: "Times New Roman"; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoNormal {
+	FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; FONT-FAMILY: "Times New Roman"; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoNormal {
+	FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; FONT-FAMILY: "Times New Roman"; mso-style-parent: ""; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"
+}
+A:link {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+SPAN.MsoHyperlink {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+A:visited {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+SPAN.MsoHyperlinkFollowed {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+P {
+	FONT-SIZE: 12pt; MARGIN-LEFT: 0in; MARGIN-RIGHT: auto; FONT-FAMILY: "Times New Roman"; mso-pagination: widow-orphan; mso-fareast-font-family: "Times New Roman"; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto
+}
+DIV.Section1 {
+	page: Section1
+}
+OL {
+	MARGIN-BOTTOM: 0in
+}
+UL {
+	MARGIN-BOTTOM: 0in
+}
+span.SpellE
+	{}
+h1
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:24.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+span.GramE
+	{}
+h4
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+.style1 {
+	color: #FF0000;
+}
+.auto-style1 {
+	text-decoration: underline;
+}
+</STYLE>
+<!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+<script type="text/javascript" fptype="dynamicoutline">
+<!--
+function dynOutline() {}
+//-->
+</script>
+<script language="JavaScript1.2" fptype="dynamicoutline" src="outline.js">
+</script>
+<script language="JavaScript1.2" fptype="dynamicoutline" for="document" event="onreadystatechange()">
+<!--
+initOutline()
+//-->
+</script>
+</HEAD>
+<BODY lang=EN-US style="tab-interval: .5in" vLink=blue link=blue onclick="dynOutline()" language="Javascript1.2">
+<DIV style="Z-INDEX: 1">
+<DIV class=Section1 style="Z-INDEX: 1">
+<h2><span lang=EN-US>Assignment 2:&nbsp; Automatic Panoramic Mosaic Stitching</span></h2>
+
+<p>Credited to course csci1950 of Brown University</p>
+<p><b><span lang=EN-US>Due:</span></b><span lang=EN-US>&nbsp; 11:59 pm, February 24th, 2016</span></p>
+<DIV class=MsoNormal style="TEXT-ALIGN: center" align=center>
+<HR align=center width="100%" SIZE=2>
+</DIV>
+<H2><font face="Times New Roman">Synopsis</font></H2>
+<div class="Section1">
+	<div class="Section1">
+		<div class="Section1">
+			<font face="Times New Roman">In this project, you will implement a 
+			system to combine a series of photographs into a  
+			panorama. Your software will automatically align the photographs 
+			(determine their overlap and relative positions) and then blend the 
+			resulting photos into a single seamless panorama. You will then be 
+			able to view the resulting panorama inside an interactive Web 
+			viewer. <br>
+			First, you should download the
+			<a href="package/stitch_p2.zip" style="color: blue; text-decoration: underline; text-underline: single">test images and skeleton code</a>. Also read the
+			<a style="color: blue; text-decoration: underline; text-underline: single" href="package/360_Degree_Panorama.zip">javascript plugin of 360 degree panorama viewer (optional but recommended).</a>&nbsp; </font></div>
+	</div>
+	<p align="center">
+	<img border="0" src="images/tn_lorenm.jpg" width="1000" height="100"></div>
+<div class="Section1">
+	<h3><font face="Times New Roman">Tips about the skeleton code and Visual Studio</font></h3>
+	<h4>Running program from the command line</h4>
+	<p class="MsoNormal">To run from the command line, click the Windows Start 
+	button -> &quot;Run&quot; -> enter &quot;cmd&quot; -> click &quot;OK&quot;. <br>
+	A command window will pop up where you can type 
+	DOS commands. Use the DOS &quot;<span class="SpellE">cd</span>&quot; (change 
+	directory) command to navigate to the directory where Project2.exe is 
+	located. Then type &quot;Project2&quot; followed by your arguments. If you do not 
+	supply any arguments, the program will print out information on what 
+	arguments it expects. </p>
+	<h4>Running from a shortcut</h4>
+	<p class="MsoNormal">Another way to pass arguments to a program is to create 
+	a shortcut to it. To create a shortcut, right-click on the executable and 
+	drag to the location where you wish to place the shortcut. A menu will pop 
+	up when you let go of the mouse button. From the menu, select &quot;Create 
+	Shortcut Here&quot;. Now right-click on the short-cut you've created and select 
+	&quot;Properties&quot;. In the properties dialog select the &quot;Shortcut&quot; tab and add 
+	your arguments after the text in the &quot;Target&quot; field. Your arguments must be 
+	outside of the quotation marks and separated with spaces. </p>
+	<h4><font face="Times New Roman">Running the skeleton program</font></h3>
+	The whole Visual Studio Solution contains 2 projects: "ImageLib" project belongs to a 3rd party image library; "project2" is the main project, and "Project2.cpp" contains the main() function.
+	<br>
+	To debug with arguments inside Visual Stusio, you need to:
+	<ol type="1" style="margin-bottom: 0in">		
+		<li class="MsoNormal">From the &quot;Project&quot; menu choose &quot;Properties&quot; to 
+		bring up the &quot;Property Pages&quot; dialog.
+		</li>
+		<li class="MsoNormal">Select the &quot;Debugging&quot; Property page.
+		</li>
+		<li class="MsoNormal">Enter your arguments in the &quot;Command Arguments&quot; 
+		field.
+		</li>
+		<li class="MsoNormal">Click &quot;Ok&quot;.
+		</li>
+		<li class="MsoNormal">Now when you execute your program with arguments you entered will be passed to it 
+		automatically (<span class="style1">Visual Studio 2010 is tested. If you come across questions, email tutor with error and your development tools</span>). </li>
+	</ol>
+	<p><font face="Times New Roman"><b><font size="4">Note</font></b>: The 
+	skeleton code includes an image library, <span class="SpellE">
+	<span class="GramE">ImageLib</span></span><span class="GramE">, that</span> is simpler than OpenCV's Mat class.&nbsp; It is NOT necessary for you to peek into this library!&nbsp; <br>
+	The following may be helpful:</font></p>
+	<ol dynamicoutline>
+		<li><font face="Times New Roman">The image object, <i>
+		CImg&lt;<span class="SpellE">float</span>&gt</i>, overloads the operation (). You can access a single
+		pixel at coordinates <i>(x,y)</i> and channel <i>c</i> by <i>im(x,y,0,c)</i>, where <i>im</i> is an instance
+		of class <i>CImg&lt;<span class="SpellE">float</span>&gt</i>. </font></li>
+		
+		<li><font face="Times New Roman">The image shape object, <i>
+		CShape</i>, has three important members: <i>width</i>, <i>height</i> and <i>nBands</i>. These three members
+		represent the width, height and the number of channels of an image. You can construct an instance of <i>
+		CShape</i> by its constructor <i>CShape(int width, int height, int nBands)</i>. </font></li>
+		
+		<li><font face="Times New Roman">The file in ImageLib you should 
+		examine more carefully is Transform.h.&nbsp; You will need the <i>
+		CTransform3x3</i> class. </font></li>
+
+		<li><font face="Times New Roman">If you feel uncomfortable to ImageLib or have compatibility problems, you can change it to other lib you like, e.g. OpenCV.</font></li>
+	</ol>
+	<p>&nbsp;</div>
+<H2><font face="Times New Roman">To Do</font></H2>
+<div class="Section1">
+<div class="Section1">
+	<ol type="1" style="margin-bottom: 0in">
+		<li class="MsoNormal">Warp each image into spherical coordinates.&nbsp;(file:
+		<span class="SpellE"><i>WarpSpherical.cpp</i></span><i>, </i>routine:
+		<i>WarpRDField</i>, <i>WarpSphericalField)</i> </li>
+	</ol>
+	<p style="MARGIN-LEFT: 0.5in">[<b>TODO</b>] Compute the inverse map to warp 
+	the image by filling in the skeleton code in the <i>WarpRDField </i>and <i>
+	WarpSphericalField </i>routines to:</p>
+	<ol type="1" style="margin-bottom: 0in">
+		<ol type="a" style="margin-bottom: 0in">
+			<li class="MsoNormal"><i>WarpSphericalField </i>converts the given spherical image coordinate 
+			into the corresponding planar image coordinate using the coordinate 
+			transformation equation from the lecture notes 
+			</li>
+			<li class="MsoNormal"><i>WarpRDField </i>applies radial distortion using the equation 
+			from the lecture notes </li>
+		</ol>
+	</ol>
+	<p style="MARGIN: 5pt 0in 12pt 0.5in">(Note: You will need focal 
+	length <i>f</i> for input images.<b> If you use a different image size, do 
+	remember to scale <i>f</i> according to the image size. Please refer to more resources if you feel confused.<a href="focal.html">
+	resource</a>).</b></p>
+	<ol type="1" start="2" style="margin-bottom: 0in">
+		<li class="MsoNormal">Matching the images in pairs. 
+		(file: <span class="SpellE"><i>FeatureAlign.cpp</i></span>, routines: <i>
+		alignImagePair</i>,<i> countInliers</i>, and <span class="SpellE"><i>
+		leastSquaresFit</i></span>) </li>
+	</ol>
+	<p style="MARGIN-LEFT: 0.5in">You have to implement
+	<span class="GramE">a sparse feature</span>-based rotational motion estimation.&nbsp; 
+	The skeleton for this code is provided in <span class="SpellE"><i>
+	FeatureAlign.cpp</i></span>.&nbsp; The main routines that you will be 
+	implementing are:</p>
+	<ol type="a" style="margin-bottom: 0in; MARGIN-LEFT: 0.35in">
+			<li class="MsoNormal">
+				<i>alignImagePair()</i> takes two feature sets, f1 
+				and f2, the list of feature matches, and a <i>motion model</i> (described 
+				below), and estimates and inter-image transform matrix M. In this project, 
+				the 3D rotation motion model is being used.
+				<i>alignImagePair()</i> uses RANSAC (<span class="SpellE">RAndom</span>
+				<span class="SpellE">SAmpling</span> Consensus) to pull out a minimal set of 
+				feature matches (<i>two</i> non-identical match for this project), estimates 
+				the 3D rotation matrix, and then invokes <i>countInliers</i> to count how 
+				many of the feature matches agree with the current motion estimate. After 
+				repeated trials, the motion estimate with the largest number of inliers is 
+				used to compute a least squares estimate (by calling <i>leastSquaresFit </i>
+				and passing in the two indices of the randomly selected points<i>, </i>see 
+				below) for the motion using the SVD formula presented in class, which is 
+				then returned in the motion estimate <i>M.</i></p>
+			</li>
+			<li class="MsoNormal">
+				<i>countInliers()</i> is to count the number of matches that have a distance below <i>RANSACthresh</i>,  
+				given current estimated 3x3 rotation matrix (encoded in M) along with the focal 
+				length <i>f</i>.&nbsp; It also returns <span class="GramE">an</span> list of inlier 
+				match ids.
+			</li>
+			<li class="MsoNormal">
+				<i>leastSquaresFit()</i></span> 
+				computes a least squares estimate for the <i>rotation</i> using all of the 
+				matches previously estimated as inliers.&nbsp;It does this using the knowledge of the 
+				focal length <i>f</i> and the SVD formula presented in class.&nbsp; For 
+				convenience, the formula is repeated here:</p>
+				<p style="text-indent: -0.25in; margin-left: 1in">1.<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</span>For every matching pair p=(x,y,f)&#8596;p&#8217;=(x&#8217;,y&#8217;,f) (<font color="#0000FF"><b>where the (x&#8217;,y&#8217;) 
+				coordinates are centered at (0,0) at the optic center</b></font>), increment the 
+				matrix <b><i>A</i></b><i> = </i><span lang="EL">&#931;</span><i><sub>i</sub></i><b>
+				</b><i>p<sub>i</sub> p<sub>i</sub>&#8217;<sup>T</sup></i></p>
+				<p style="text-indent: -0.25in; margin-left: 1in">2.<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</span>Take the SVD of A to obtain <b><i>A</i></b><i> = <b>U S V</b><sup>T</sup></i></p>
+				<p style="text-indent: -0.25in; margin-left: 1in">3.<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</span>Set <b><i>R</i></b><i> = <b>V</b> <b>U</b><sup>T</sup></i> 
+				(return the matrix R in the CTransform3x3 M)
+			</li>
+
+	</ol>
+	
+	
+	
+	<p style="MARGIN-LEFT: 0.5in">[<b>TODO</b>] You will have to fill in the 
+	missing code in <i>alignImagePair</i> to:</p>
+	<ol type="1" start="2" style="margin-bottom: 0in">
+		<ol type="a" start="3" style="margin-bottom: 0in">
+			<li class="MsoNormal">Randomly select <i>two</i> valid matching pairs and 
+			compute the rotation between the two feature images using <i>
+			leastSquaresFit.</i></li>
+			<li class="MsoNormal">Call <i>countInliers</i> to map points p=(x,y,f) 
+			to a point p&#8217;=(x&#8217;,y&#8217;,f) ~ Rp using the rotation and focal length 
+			before counting inliers.</li>
+			<li class="MsoNormal">Repeat the above random selection nRANSAC 
+			times and keep the estimate with the largest number of inliers. 
+			</li>
+			<li class="MsoNormal">Write the body of <i>countInliers</i> to count 
+			the number of feature matches where the Euclidean distance after 
+			applying the estimated transform is below the threshold. (Don't forget to create 
+			the list of inlier ids.) 
+			</li>
+			<li class="MsoNormal">Write the body of <span class="SpellE"><i>
+			leastSquaresFit</i></span> to estimate the rotation matrix using the 
+			SVD formula presented above.</li>
+		</ol>
+	</ol>
+	<ol type="1" start="3" style="margin-bottom: 0in">
+		<li class="MsoNormal">The routine <i>initGlobalAlign</i> in file <i>GlobalAlign.cpp</i>, which we 
+		<font color="#FF0000">have 
+		mostly written</font> for you, matches all images (their features) against 
+		each other and stores the results (lists of inlier matching pairs and 
+		inter-frame rotation estimates) in
+		<span style="font-size: 10pt; ">AlignMatrix &amp;am</span>.&nbsp; 
+		It then initializes the rotation estimates by finding the strongest 
+		&#8220;link&#8221; between different image pairs and factors in these rotations to 
+		the global estimate that is returned in
+		<span style="font-size: 10pt; ">
+		vector&lt;CTransform3x3&gt; &amp;ms</span>.&nbsp; Since the logic in this latter 
+		process is a little tricky, we have written it for you.<br>
+		<br>
+		<span style="font-size: 10pt; color: blue; ">int</span><span style="font-size: 10pt; "> 
+		initGlobalAlign(<span style="COLOR: blue">const</span> vector&lt;FeatureSet&gt; 
+		&amp;fs, <span style="COLOR: blue">int</span> minMatches, MotionModel m,
+		<span style="COLOR: blue">float</span> f,<br>
+		&nbsp;&nbsp;&nbsp; <span style="COLOR: blue">int</span> width, <span style="COLOR: blue">
+		int</span> height, <span style="COLOR: blue">int</span> nRANSAC,
+		<span style="COLOR: blue">double</span> RANSACthresh, AlignMatrix &amp;am,<br>
+		&nbsp;&nbsp;&nbsp; vector&lt;CTransform3x3&gt; &amp;ms);</span><br>
+		<br>
+		<b>[TODO]</b>&nbsp; Implement the missing code in <i>initGlobalAlign</i> to 
+		compute the pairwise alignment between each two images. You'll need to 
+		call your feature matcher, as well as the <i>alignImagePair</i> routine.</li></ol><ol type="1" start="4" style="margin-bottom: 0in">
+		<li class="MsoNormal">Stitch and crop the resulting aligned images. 
+		(file: <span class="SpellE"><i>BlendImages.cpp</i></span>, routines:
+		<span class="SpellE"><i>BlendImages</i></span><i>, <span class="SpellE">AccumulateBlend</span>, 
+		<span class="SpellE">NormalizeBlend</span></i>)<br><br>[<b>TODO</b>] Given the warped images and their relative displacements, 
+		figure out how large the final stitched image will be and their absolute 
+		displacements in the mosaic (<span class="SpellE"><i>BlendImages</i></span>).  
+		</li>
+	
+	<p [<b>[<b>TODO</b></b>] Then, relocate each image to its 
+	final location and blend it with its neighbors (<span class="SpellE"><i>AccumulateBlend</i></span><i>,
+	<span class="SpellE">NormalizeBlend</span></i>).&nbsp;Try a simple feathering 
+	function as your weighting function (see mosaics lecture slide on 
+	&quot;feathering&quot;) (you may want to set the blend weights before you 
+	project on the sphere according to the fact that images may overlap both 
+	horizontally and vertically. The distance map is described in 
+	[<a style="color: blue; text-decoration: underline; text-underline: single" href="szeliski.pdf">Szeliski 
+	&amp; Shum</a>]).&nbsp; However, if you want nicer results, you may want to 
+	use Laplacian pyramid blending to compensate for exposure differences.&nbsp; In
+	<span class="SpellE"><i>NormalizeBlend</i></span>, remember to set the alpha 
+	channel of the resultant panorama to opaque!</p>
+	</div>
+	<h2>&nbsp;</h2>
+	<h2><font face="Times New Roman"><a name="panorama">Creating the Panorama</a></font></h2>
+	<div class="Section1">
+		<ol type="1" style="margin-bottom: 0in">
+			<li class="MsoNormal">Use the above program you wrote to 
+			align/stitch images into the resulting panorama using the following 
+			set of steps: (assume the generated binary program is panorama.exe)<br>
+&nbsp;<ol type="1" style="margin-bottom: 0in">
+				<li class="MsoNormal">If your images have radial distortion that 
+				you wish to correct, use a series of commands such as:<br>
+				<br>
+				&nbsp;&nbsp;&nbsp; panorama<i> rdWarp img_i.tga goodimg_i.tga f k1 k2</i><br>
+				<br>
+				This removes radial distortion and stores the results in <i>
+				goodimg_i.tga</i>.<br>
+&nbsp;</li>
+				<li class="MsoNormal" style="margin-bottom: 12pt">Compute the 
+				features for each of the images.&nbsp; You are suggested to use SIFT executable of David Lowe <a style="color: blue; text-decoration: underline; text-underline: single" href="http://www.cs.ubc.ca/~lowe/keypoints/">
+			http://www.cs.ubc.ca/~lowe/keypoints/</a> for computing the feature point.<br>
+				You can use the following command to compute the features:<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				siftWin32.exe < img_i.pgm > feature_i.key <br>
+				Note that the input image should be converted to grayscale pgm format (using IrfanView, for instance).<br>
+				Let's say you end up with a 
+				file <i>feature_i.key</i> for image i. 
+				</li>
+				<li class="MsoNormal" style="margin-bottom: 12pt">Create a text 
+				file (say <i>image_list.txt</i>), which looks like this:<br>
+				<br>
+				<i>&nbsp;&nbsp;&nbsp; goodimg_1.tga feature_1.key<br>
+				&nbsp;&nbsp;&nbsp; goodimg_2.tga feature_2.key<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...<br>
+				&nbsp;&nbsp;&nbsp; goodimg_n.tga feature_n.key</i> 
+				</li>
+				<li class="MsoNormal" style="margin-bottom: 12pt">To match all 
+				of the input images and compute their pairwise alignments, use<br>
+				<br>
+				&nbsp;&nbsp;&nbsp; panorama<i> alignAll image_list.txt orientations.txt 
+				minMatches f nRANSAC RANSACthresh bundleAdjustIters [sift]</i><br>
+				<br>
+				For example, some reasonable values might be:<br>
+				<br>
+				&nbsp;&nbsp;&nbsp; panorama<i> alignAll image_list.txt orientations.txt 20 595 
+				100 10 8 sift</i><br>
+				<br>
+				This will output a file <i>orientations.txt</i> with the global 
+				orientations (one rotation matrix per image).
+				<font color="#FF0000">Note if you do not implement
+				<font face="Times New Roman"><i>bundleAdjust</i> in extra 
+				credits, </font>the value of<i> bundleAdjustIters </i>has no 
+				use.</font></li>
+				<li class="MsoNormal">Finally, stitch the images into the final 
+				panorama <i>outimg.tga</i>:<br>
+				<br>
+				<i>&nbsp;&nbsp;&nbsp; panorama blendAll orientations.txt outimg.tga f 
+				blendRadius</i><br>
+				<br>
+				Continuing the above numerical example, this might look like:<br>
+				<br>
+				<i>&nbsp;&nbsp;&nbsp; panorama blendAll orientations.txt outimg.tga 595 200</i> 
+				</li>
+			</ol>
+			</li>
+		</ol>
+		<ol type="1" start="2" style="margin-bottom: 0in">
+			<li class="MsoNormal">Convert your resulting image to a JPEG and 
+			paste it on a Web page along with code to run the interactive 
+			viewer.&nbsp;</li>
+		</ol>
+</div>
+	<h2>&nbsp;</h2>
+	<h2><font face="Times New Roman"><a name="debugging">Debugging Guidelines</a></font></h2>
+	<div class="Section1">
+		<div class="Section1">
+			<font face="Times New Roman">You can use the test results included 
+			in the image folders to check whether your program is running 
+			correctly.</font><p>In general, to 
+			debug your program, you should make sure that a two-image example 
+			works correctly, then test out two-frame bundle adjustment, then try 
+			with more images.&nbsp; In all cases, produce the blended panoramas 
+			(perhaps saving them as different filenames) to check that your 
+			algorithm is working correctly.</div>
+		<p>&nbsp;</div>
+	<h2><font face="Times New Roman"><a name="turnin">Handing In Your Code and Report</a></font></h2>
+	You need to upload a zip package to elearn system, containing "code" and "html" folders (case-sensitive):
+	<p>code\ - folder</p>
+	<div class="Section1">
+		<ol type="1" style="margin-bottom: 0in">
+			<li class="MsoNormal">The executable (panorama.exe).
+			</li>
+			<li class="MsoNormal">Code that you wrote (just the .cpp 
+			files you modified and any new files you needed).
+			</li>
+		</ol>
+	</div>
+	<p>html\ - folder</p>
+	<div class="Section1">
+		<ol type="1" style="margin-bottom: 0in">
+			<li class="MsoNormal">Please use "index.html" as html report entry (case-sensitive).</li>
+			<li class="MsoNormal">Your report will
+			include at least <span class="auto-style1"><strong><em>four</em></strong></span> panoramas:&nbsp; (1) the mountain 
+			test sequence, (2) two of the
+			<a style="color: blue; text-decoration: underline; text-underline: single" href="package/samplePanos.zip">
+			spherical panoramas</a> downloadable and (3) an example that is 
+			captured by yourself. Each panorama should be shown as (1) a low-res 
+			inlined image on the web page, (2) a link that you can click on to 
+			show the full-resolution .jpg file, and (3) a 
+			viewer as described above. In the report, you also need to have a short description of what worked well and 
+			what didn&#8217;t.&nbsp; If you tried several variants or did something 
+			non-standard, please describe them as well.
+
+	</ol>
+	<p>Compressed the folders into &#60;your student ID&#62;-Asgn2.zip or &#60;your student ID&#62;-Asgn2.rar. Submit your package via eLearn system. <br>
+	If the package is too large, you are recommend to put it somewhere else and let the tutor download it.</p>
+</div>
+	<h2>&nbsp;</h2>
+	<h2><font face="Times New Roman"><a name="EC">Extra Credit</a></font></h2>
+	<p>Here is a list of suggestions for extending the program for extra credit. 
+	You are encouraged to come up with your own extensions. We're always 
+	interested in seeing new, unanticipated ways to use this program!</p>
+	<ul style="margin-bottom: 0in">
+		<li>
+		<div class="Section1">
+			<font face="Times New Roman">The routine <i>bundleAdjust</i> in<i> 
+			GlobalAlign.cpp</i> takes the current set of rotation estimates in
+			</font><span style="font-size: 10pt; font-family: Times New Roman">
+			vector&lt;CTransform3x3&gt; &amp;ms</span><font face="Times New Roman">, 
+			computes the linearized set of update equations needed for the least 
+			squares update, solves the least squares system, and then updates 
+			the rotation matrices.<br>
+			<br>
+			</font>
+			<span style="font-size: 10pt; color: blue; font-family: Times New Roman">
+			int</span><span style="font-size: 10pt; font-family: Times New Roman"> 
+			bundleAdjust(<span style="COLOR: blue">const</span> vector&lt;FeatureSet&gt; 
+			&amp;fs, MotionModel m, <span style="COLOR: blue">float</span> f,
+			<span style="COLOR: blue">int</span> width,
+			<span style="COLOR: blue">int</span> height,
+			<span style="COLOR: blue">const</span> AlignMatrix &amp;am, 
+			vector&lt;CTransform3x3&gt; &amp;ms, <span style="COLOR: blue">int</span> 
+			bundleAdjustIters); <br>
+			</span><font face="Times New Roman"><br>
+			In order to guard against &#8220;uphill&#8221; steps in the energy minimization, 
+			the Levenberg-Marquardt algorithm is used, which multiplies the 
+			diagonal of the normal equations by a factor (1+&#955;), with &#955; being 
+			increase/decreased according to the success of the previous 
+			iteration. You may implement the two missing pieces of the <i>
+			bundleAdjust</i> routine that compute the linearized set of 
+			equations and perform the rotation matrix update For each panorama. 
+			Show the result <b>with and without</b> bundle adjustment.&nbsp; </font>
+			<ol type="1" style="margin-bottom: 0in">
+				<li class="MsoNormal">The set of linear equations matrix is 
+				pre-allocated for you:&nbsp; the number of equations is three times 
+				the number of total feature matches, and the number of variables 
+				is three times the number of frames (one 3-D incremental 
+				rotation vector per frame/rotation).&nbsp; Fill in the appropriate 
+				terms in A and b, i.e.,<i><br>
+				<img border="0" src="images/projec1.gif" width="419" height="38"></i></li>
+				<li class="MsoNormal">Update the rotation matrices R<sub>j</sub> 
+				using Rodriguez&#8217;s formula, i.e.,<br>
+				<img border="0" src="images/image003.jpg" width="491" height="31"><br>
+				(the <b><i><span lang="EL">&#969;</span></i><sub>j</sub></b> can be 
+				read off three at a time from the solution vector <i>x</i>, as 
+				given in the skeleton code).</li>
+			</ol>
+		</div>
+&nbsp;</li>
+		<li><font face="Times New Roman">Specify the global orientation of the 
+		panorama.&nbsp; A simple way of doing this is to rotate the panorama so that 
+		the first image is at the equator.&nbsp; This is what the skeleton code does 
+		in the routine <i>fixRotations</i>&#8212;it premultiplies each of the rotation 
+		matrices by the inverse of the rotation matrix for the first image. You 
+		can update this method to do something fancier if you like, for extra 
+		credit.&nbsp; A nicer solution is described in
+		<a style="color: blue; text-decoration: underline; text-underline: single" href="papers/MSR-TR-2004-92.pdf">
+		MSR-TR-2004-92.pdf</a> on pages 43-44. </font></li>
+		<li><font face="Times New Roman">Sometimes, there exists exposure 
+		difference between images, which results in brightness fluctuation in 
+		the final mosaic. Try to get rid of this artifact.</font></li>
+		<li><font face="Times New Roman">Try shooting a sequence with some 
+		objects moving.&nbsp; What did you do to remove &#8220;ghosted&#8221; versions of the 
+		objects? </font></li>
+		<li><font face="Times New Roman">Implement a better blending technique, 
+		e.g.,
+		<a style="color: blue; text-decoration: underline; text-underline: single" href="http://portal.acm.org/ft_gateway.cfm?id=882269&type=pdf&coll=GUIDE&dl=GUIDE&CFID=37241211&CFTOKEN=62443481">
+		p</a><span style="color: blue"><a style="color: blue; text-decoration: underline; text-underline: single" href="http://portal.acm.org/ft_gateway.cfm?id=882269&type=pdf&coll=GUIDE&dl=GUIDE&CFID=37241211&CFTOKEN=62443481">oisson 
+		image blending</a> </span>or
+		<a style="color: blue; text-decoration: underline; text-underline: single" href="http://www.cc.gatech.edu/cpl/projects/graphcuttextures/">
+		graph cuts</a>.</font></li>
+		<li><font face="Times New Roman">Anything else?</font></li>
+	</ul>
+	<p>&nbsp;</p>
+	<div class="MsoNormal" style="TEXT-ALIGN: center" align="center">
+		<hr align="center" width="100%" SIZE="2"></div>
+	<h2><font face="Times New Roman"><a name="panoramalinks">Panorama Links </a>
+	</font></h2>
+	<ul type="disc" style="margin-bottom: 0in">
+		<li class="MsoNormal">
+		<a style="color: blue; text-decoration: underline; text-underline: single" href="http://www.panoramas.dk/">
+		Panoramas.dk</a>: weekly archive of full-screen, high-quality panoramas 
+		worldwide 
+		</li>
+		<li class="MsoNormal">
+		<a style="color: blue; text-decoration: underline; text-underline: single" href="http://www.vrseattle.com/">
+		VR Seattle</a>: Seattle &amp; Washington panorama  
+		</li>
+		<li class="MsoNormal">
+		<a style="color: blue; text-decoration: underline; text-underline: single" href="http://www.destination360.com/start1.htm">
+		Peru Panoramas</a> 
+		</li>
+		<li class="MsoNormal">
+		<a style="color: blue; text-decoration: underline; text-underline: single" href="package/samplePanos.zip">A complete set of test images</a> </li>
+	</ul>
+</div>
+</DIV></DIV>
+
+</BODY></HTML>
