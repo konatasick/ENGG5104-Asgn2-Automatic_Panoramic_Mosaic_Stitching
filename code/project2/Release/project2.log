@@ -1,0 +1,151 @@
+﻿  BlendImages.cpp
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\ImageLib/ImageLib.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\RefCntMem.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(165): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(166): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(167): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(169): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(171): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.inl : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\FileIO.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Convert.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Transform.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\WarpImage.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Convolve.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Pyramid.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+BlendImages.cpp(56): warning C4244: “=”: 从“unsigned int”转换到“float”，可能丢失数据
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\CImg.h(14612): warning C4244: “参数”: 从“const double”转换到“const int”，可能丢失数据
+  c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\CImg.h(14610): note: 编译类 模板 成员函数“double cimg_library::CImg<float>::_cimg_math_parser::mp_joff(void)”时
+  c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\CImg.h(14690): note: 参见对正在编译的函数 模板 实例化“double cimg_library::CImg<float>::_cimg_math_parser::mp_joff(void)”的引用
+  c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\CImg.h(15881): note: 参见对正在编译的类 模板 实例化“cimg_library::CImg<float>::_cimg_math_parser”的引用
+  c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\CImg.h(15879): note: 编译类 模板 成员函数“double cimg_library::CImg<float>::eval(const char *const ,const double,const double,const double,const double) const”时
+  c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\CImg.h(46711): note: 参见对正在编译的函数 模板 实例化“double cimg_library::CImg<float>::eval(const char *const ,const double,const double,const double,const double) const”的引用
+  c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\CImg.h(46710): note: 参见对正在编译的类 模板 实例化“cimg_library::CImg<float>”的引用
+  FeatureAlign.cpp
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\ImageLib/ImageLib.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\RefCntMem.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(165): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(166): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(167): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(169): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(171): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.inl : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\FileIO.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Convert.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Transform.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\WarpImage.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Convolve.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Pyramid.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+FeatureAlign.cpp(57): warning C4554: “&”: 检查运算符优先级可能存在的错误；使用圆括号阐明优先级
+FeatureAlign.cpp(75): warning C4018: “<”: 有符号/无符号不匹配
+FeatureAlign.cpp(217): warning C4018: “<”: 有符号/无符号不匹配
+  FeatureSet.cpp
+  GlobalAlign.cpp
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\ImageLib/ImageLib.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\RefCntMem.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(165): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(166): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(167): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(169): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(171): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.inl : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\FileIO.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Convert.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Transform.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\WarpImage.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Convolve.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Pyramid.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  jacob.cpp
+  P3Math.cpp
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\ImageLib/ImageLib.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\RefCntMem.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(165): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(166): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(167): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(169): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(171): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.inl : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\FileIO.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Convert.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Transform.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\WarpImage.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Convolve.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Pyramid.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  Project2.cpp
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\ImageLib/ImageLib.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\RefCntMem.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(165): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(166): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(167): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(169): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(171): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.inl : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\FileIO.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Convert.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Transform.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\WarpImage.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Convolve.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Pyramid.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+Project2.cpp(92): warning C4244: “=”: 从“float”转换到“uchar”，可能丢失数据
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\CImg.h(14612): warning C4244: “参数”: 从“const double”转换到“const int”，可能丢失数据
+  c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\CImg.h(14610): note: 编译类 模板 成员函数“double cimg_library::CImg<float>::_cimg_math_parser::mp_joff(void)”时
+  c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\CImg.h(14690): note: 参见对正在编译的函数 模板 实例化“double cimg_library::CImg<float>::_cimg_math_parser::mp_joff(void)”的引用
+  c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\CImg.h(15881): note: 参见对正在编译的类 模板 实例化“cimg_library::CImg<float>::_cimg_math_parser”的引用
+  c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\CImg.h(15879): note: 编译类 模板 成员函数“double cimg_library::CImg<float>::eval(const char *const ,const double,const double,const double,const double) const”时
+  c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\CImg.h(46711): note: 参见对正在编译的函数 模板 实例化“double cimg_library::CImg<float>::eval(const char *const ,const double,const double,const double,const double) const”的引用
+  c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\CImg.h(46710): note: 参见对正在编译的类 模板 实例化“cimg_library::CImg<float>”的引用
+  WarpSpherical.cpp
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\ImageLib/ImageLib.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\RefCntMem.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(165): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(166): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(167): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(169): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.h(171): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Image.inl : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\FileIO.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Convert.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Transform.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\WarpImage.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Convolve.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\imagelib\Pyramid.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\CImg.h(14612): warning C4244: “参数”: 从“const double”转换到“const int”，可能丢失数据
+  c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\CImg.h(14610): note: 编译类 模板 成员函数“double cimg_library::CImg<float>::_cimg_math_parser::mp_joff(void)”时
+  c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\CImg.h(14690): note: 参见对正在编译的函数 模板 实例化“double cimg_library::CImg<float>::_cimg_math_parser::mp_joff(void)”的引用
+  c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\CImg.h(15881): note: 参见对正在编译的类 模板 实例化“cimg_library::CImg<float>::_cimg_math_parser”的引用
+  c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\CImg.h(15879): note: 编译类 模板 成员函数“double cimg_library::CImg<float>::eval(const char *const ,const double,const double,const double,const double) const”时
+  c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\CImg.h(46711): note: 参见对正在编译的函数 模板 实例化“double cimg_library::CImg<float>::eval(const char *const ,const double,const double,const double,const double) const”的引用
+  c:\users\joy\documents\visual studio 2015\projects\engg5104-asgn2-automatic_panoramic_mosaic_stitching\code\project2\CImg.h(46710): note: 参见对正在编译的类 模板 实例化“cimg_library::CImg<float>”的引用
+  正在生成代码...
+  project2.vcxproj -> C:\Users\JOY\Documents\Visual Studio 2015\Projects\ENGG5104-Asgn2-Automatic_Panoramic_Mosaic_Stitching\code\project2\.\Release\project2.exe
+  project2.vcxproj -> .\Release/v4gP1.pdb (Full PDB)
